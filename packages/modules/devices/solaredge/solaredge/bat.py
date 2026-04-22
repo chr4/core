@@ -119,7 +119,7 @@ class SolaredgeBat(AbstractBat):
         )
 
         values = self.__tcp_client.read_holding_registers_bulk(
-            Registers.STORAGE_CONTROL_MODE, 13, mapping=bulk, unit=unit)
+            Registers.STORAGE_CONTROL_MODE, 14, mapping=bulk, unit=unit)
         log.debug(f"Bat raw values {self.__tcp_client.address}: {values}")
 
         if power_limit is None:  # No Bat Control should be used.
